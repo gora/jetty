@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: hipsnip-jetty
+# Cookbook Name:: hipsnip_jetty
 # Recipe:: default
 #
 # Copyright 2012-2013, HipSnip Limited

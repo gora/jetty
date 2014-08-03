@@ -1,10 +1,10 @@
 require_relative 'spec_helper'
 
-describe "hipsnip-jetty::default" do
-	chef_run = ChefSpec::ChefRunner.new.converge 'hipsnip-jetty::default'
+describe "hipsnip_jetty::default" do
+	chef_run = ChefSpec::ChefRunner.new.converge 'hipsnip_jetty::default'
 	node = chef_run.node
 	it "should include the java::default recipe" do
-		expect(chef_run).to include_recipe 'hipsnip-jetty::default'
+		expect(chef_run).to include_recipe 'hipsnip_jetty::default'
 	end
 	it "should create the folders necessary for jetty" do
 		[node['jetty']['home'], node['jetty']['contexts'], node['jetty']['webapps'], "#{node['jetty']['home']}/lib","#{node['jetty']['home']}/resources"].each do |path|
